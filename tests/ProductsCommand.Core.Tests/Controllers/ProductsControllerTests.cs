@@ -3,7 +3,7 @@
 public class ProductsControllerTests
 {
     [Fact]
-    public async Task ProductsAsync_ShouldInvokeInputPortAndReturnPizzaSpecials()
+    public async Task ProductsAsync_ShouldInvokeInputPortAndReturnProducts()
     {
         // Arrange
         var inputPort = Substitute.For<IProductsInputPort>();
