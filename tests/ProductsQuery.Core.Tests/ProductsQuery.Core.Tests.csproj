@@ -18,4 +18,11 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Cache\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Interactors\" />
+    <Folder Include="Presenters\" />
+  </ItemGroup>
+
 </Project>
