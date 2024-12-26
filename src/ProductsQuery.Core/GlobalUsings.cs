@@ -1,0 +1,11 @@
+global using ProductsQuery.BusinessObjects.Interfaces;
+global using ProductsQuery.Entities.Dtos;
+global using System.Text.Json;
+global using Microsoft.Extensions.Caching.Distributed;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Options;
+global using ProductsQuery.BusinessObjects.Options;
+global using ProductsQuery.Core.Cache;
+global using ProductsQuery.Core.Controllers;
+global using ProductsQuery.Core.Interators;
+global using ProductsQuery.Core.Presenters;

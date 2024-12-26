@@ -1,6 +1,6 @@
 ﻿namespace ProductsQuery.Entities.ValueObjects;
 
-public class EndPoint
+public static class Endpoints
 {
     public const string GetProducts = "/products";
 }

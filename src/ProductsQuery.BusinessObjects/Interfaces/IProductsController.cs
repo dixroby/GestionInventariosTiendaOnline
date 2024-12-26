@@ -1,7 +1,6 @@
-﻿namespace ProductsQuery.BusinessObjects.Interfaces
+﻿namespace ProductsQuery.BusinessObjects.Interfaces;
+
+public interface IProductsController
 {
-    internal interface IProductsController
-    {
-        Task<IEnumerable<ProductsDto>> GetSpecialsAsync();
-    }
+    public Task<IEnumerable<ProductsDto>> GetProductsAsync();
 }
