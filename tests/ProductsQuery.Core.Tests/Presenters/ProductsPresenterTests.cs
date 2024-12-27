@@ -1,4 +1,9 @@
-﻿namespace ProductsCommand.Core.Tests.Presenters
+﻿using Microsoft.Extensions.Options;
+using ProductsQuery.BusinessObjects.Options;
+using ProductsQuery.Core.Presenters;
+using ProductsQuery.Entities.Dtos;
+
+namespace ProductsCommand.Core.Tests.Presenters
 {
     public class ProductsPresenterTests
     {

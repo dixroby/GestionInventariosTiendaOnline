@@ -1,5 +1,7 @@
 ﻿using NSubstitute;
 using ProductsQuery.BusinessObjects.Interfaces;
+using ProductsQuery.Core.Controllers;
+using ProductsQuery.Entities.Dtos;
 
 namespace ProductsCommand.Core.Tests.Controllers;
 

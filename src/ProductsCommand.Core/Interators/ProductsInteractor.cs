@@ -1,4 +1,5 @@
 ﻿
+
 namespace ProductsCommand.Core.Interators;
 
 internal class ProductsInteractor(IProductsRepository repository) : IProductsInputPort

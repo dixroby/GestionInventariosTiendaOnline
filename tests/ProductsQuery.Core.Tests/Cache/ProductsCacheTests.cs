@@ -4,9 +4,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using ProductsQuery.BusinessObjects.Interfaces;
+using ProductsQuery.Core.Cache;
 using ProductsQuery.Entities.Dtos;
 
-namespace ProductsCommand.Core.Tests.Cache;
+namespace ProductsQuery.Core.Tests.Cache;
 
 public class ProductsCacheTests
 {
@@ -45,9 +46,9 @@ public class ProductsCacheTests
         var CacheOptions = Options.Create(new MemoryDistributedCacheOptions());
         IDistributedCache Cache = new MemoryDistributedCache(CacheOptions);
 
-        ILogger<IProductsCache> Logger = new NullLogger<ProductsCache>();
+        ILogger<ProductsCache> logger = new NullLogger<ProductsCache>();
 
-        var productsCache = new ProductsCache(Cache, Logger);
+        var productsCache = new ProductsCache(Cache, logger);
 
         // Act
         await productsCache.SetProductsAsync(products);

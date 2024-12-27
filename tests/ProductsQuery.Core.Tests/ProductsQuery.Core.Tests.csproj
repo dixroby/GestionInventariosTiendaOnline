@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ProductsQuery.BusinessObjects\ProductsQuery.BusinessObjects.csproj" />
+    <ProjectReference Include="..\..\src\ProductsQuery.Core\ProductsQuery.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

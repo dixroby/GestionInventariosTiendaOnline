@@ -1,4 +1,4 @@
-using ProductsQuery.BusinessObjects.Interfaces;
+using ProductsQuery.Repositories.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();

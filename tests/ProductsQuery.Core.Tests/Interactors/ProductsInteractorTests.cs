@@ -1,4 +1,9 @@
-﻿namespace ProductsCommand.Core.Tests.Interactors;
+﻿using NSubstitute;
+using ProductsQuery.BusinessObjects.Interfaces;
+using ProductsQuery.Core.Interators;
+using ProductsQuery.Entities.Dtos;
+
+namespace ProductsCommand.Core.Tests.Interactors;
 
 public class ProductsInteractorTests
 {
