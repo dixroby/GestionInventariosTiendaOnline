@@ -1,0 +1,10 @@
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using UserQuery.Repositories.Entities;
+global using Microsoft.EntityFrameworkCore.ChangeTracking;
+global using Microsoft.Extensions.Options;
+global using UserQuery.Repositories.Configurations;
+global using UserQuery.Repositories.Options;
+global using UserQuery.Entities.Dtos;
+global using UserQuery.Repositories.DataContexts;
+global using UserQuery.Repositories.Query;
