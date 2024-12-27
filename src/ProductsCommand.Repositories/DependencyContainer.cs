@@ -1,4 +1,6 @@
-﻿namespace Microsoft.Extensions.DependencyInjection;
+﻿using ProductsCommand.Repositories.Command;
+
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static class DependencyContainer
 {

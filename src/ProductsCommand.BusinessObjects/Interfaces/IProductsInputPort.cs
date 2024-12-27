@@ -2,5 +2,6 @@
 
 public interface IProductsInputPort
 {
-    Task GetProductsAsync();
+    Task CreateProductsAsync(ProductsDto request);
+    Task DeleteProductsAsync(ProductsDto request);
 }

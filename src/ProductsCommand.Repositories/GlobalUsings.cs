@@ -8,4 +8,3 @@ global using ProductsCommand.Repositories.DataContexts;
 global using ProductsCommand.Repositories.Entities;
 global using ProductsCommand.Repositories.Options;
 global using Microsoft.Extensions.Hosting;
-global using ProductsCommand.Repositories.Query;

@@ -10,7 +10,6 @@ public static class DependencyContainer
         services.AddScoped<IProductsInputPort, ProductsInteractor>();
         services.AddScoped<IProductsOutputPort, ProductsPresenter>();
         services.AddScoped<IProductsController, ProductsController>();
-        services.AddSingleton<IProductsCache, ProductsCache>();
 
         services.Configure(configureProductsOptions);
 

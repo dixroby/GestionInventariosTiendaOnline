@@ -4,6 +4,7 @@ namespace ProductsCommand.BusinessObjects.Interfaces
 {
     public interface IProductsRepository
     {
-        Task<IEnumerable<ProductsDto>> GetProductsSortedByDescendingPriceAsync();
+        Task CreateProducts(ProductsDto request);
+        Task DeleteProducts(ProductsDto request);
     }
 }

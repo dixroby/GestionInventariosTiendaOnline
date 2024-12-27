@@ -36,8 +36,6 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapGet(Endpoints.GetProducts, async (IProductsController controller) 
-=> TypedResults.Ok(await controller.GetProductsAsync()));
 
 app.InitializeDB();
 

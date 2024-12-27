@@ -2,5 +2,6 @@
 
 public static class Endpoints
 {
-    public const string GetProducts = "/products";
+    public const string CreateProducts = "/createproducts";
+    public const string DeleteProducts = "/deleteproducts";
 }

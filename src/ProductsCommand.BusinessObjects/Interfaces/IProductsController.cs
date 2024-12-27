@@ -2,5 +2,6 @@
 
 public interface IProductsController
 {
-    public Task<IEnumerable<ProductsDto>> GetProductsAsync();
+    public Task CreateProductsAsync(ProductsDto request);
+    public Task DeleteProductsAsync(ProductsDto productId);
 }

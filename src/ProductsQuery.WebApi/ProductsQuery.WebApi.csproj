@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductsQuery.Core\ProductsQuery.Core.csproj" />
-    <ProjectReference Include="..\ProductsQuery.Repositories\ProductsQuery.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

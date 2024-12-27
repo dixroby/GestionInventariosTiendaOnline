@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,4 +13,8 @@
     <ProjectReference Include="..\ProductsCommand.BusinessObjects\ProductsCommand.BusinessObjects.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+  	<InternalsVisibleTo Include="ProductsCommand.Core.Tests" />
+  </ItemGroup>
+	
 </Project>

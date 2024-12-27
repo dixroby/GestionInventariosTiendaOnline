@@ -1,14 +1,19 @@
-﻿namespace ProductsCommand.Core.Interators;
+﻿
+namespace ProductsCommand.Core.Interators;
 
-internal class ProductsInteractor(IProductsRepository repository,
-                                  IProductsOutputPort presenter) : IProductsInputPort
+internal class ProductsInteractor(IProductsRepository repository) : IProductsInputPort
 {
-    public async Task GetProductsAsync()
+    public async Task CreateProductsAsync(ProductsDto request)
     {
-        var Result =
-            await repository
-            .GetProductsSortedByDescendingPriceAsync();
+        await 
+            repository
+            .CreateProducts(request);
+    }
 
-        await presenter.HandleResultAsync(Result);
+    public async Task DeleteProductsAsync(ProductsDto request)
+    {
+        await
+            repository
+            .DeleteProducts(request);
     }
 }
