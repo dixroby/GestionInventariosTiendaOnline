@@ -38,7 +38,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGroup("")
-   .WithTags("Products endpoints")
+   .WithTags("Products query")
    .MapProductsEndPoint();
 
 

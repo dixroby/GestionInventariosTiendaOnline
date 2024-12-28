@@ -24,7 +24,7 @@ internal class ProductsInteractor(IProductsRepository repository,
     {
         var Result =
                 await repository
-                .GetProductsSortedByDescendingPriceAsync();
+                .GetProductByNameAndCategory(request);
         
         await presenter.HandleResultAsync(Result);
     }

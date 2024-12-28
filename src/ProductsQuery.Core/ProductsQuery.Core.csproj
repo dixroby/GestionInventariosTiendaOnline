@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductsQuery.BusinessObjects\ProductsQuery.BusinessObjects.csproj" />
-    <ProjectReference Include="..\ProductsQuery.Entities\ProductsQuery.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
