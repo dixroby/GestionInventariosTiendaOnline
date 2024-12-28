@@ -8,4 +8,10 @@ internal class ProductsController(IProductsInputPort inputPort,
         await inputPort.GetProductsAsync();
         return presenter.Products;
     }
+
+    public async Task<IEnumerable<ProductsDto>> GetProductByNameAndCategory(ProductsDto request)
+    {
+        await inputPort.GetProductByNameAndCategory(request);
+        return presenter.Products;
+    }
 }
