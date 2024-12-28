@@ -1,4 +1,5 @@
-﻿using UserQuery.BusinessObjects.Options;
+﻿using UserQuery.BusinessObjects.Interfaces.User;
+using UserQuery.BusinessObjects.Options;
 using UserQuery.Entities.Dtos;
 
 namespace UserQuery.Core.Presenters;

@@ -1,4 +1,5 @@
-﻿using UserQuery.Entities.Dtos;
+﻿using UserQuery.BusinessObjects.Interfaces.User;
+using UserQuery.Entities.Dtos;
 
 namespace UserQuery.Core.Cache;
 

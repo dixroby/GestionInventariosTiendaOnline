@@ -1,4 +1,4 @@
-﻿namespace UserQuery.BusinessObjects.Interfaces;
+﻿namespace UserQuery.BusinessObjects.Interfaces.User;
 public interface IUserOutputPort
 {
     IEnumerable<UserDto> User { get; }

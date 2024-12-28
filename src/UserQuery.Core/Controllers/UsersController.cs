@@ -1,9 +1,10 @@
-﻿using UserQuery.Entities.Dtos;
+﻿using UserQuery.BusinessObjects.Interfaces.User;
+using UserQuery.Entities.Dtos;
 
 namespace UserQuery.Core.Controllers;
 
 internal class UsersController(IUserInputPort inputPort,
-                                  IUserOutputPort presenter): IUserController
+                               IUserOutputPort presenter): IUserController
 {
     public async Task<IEnumerable<UserDto>> GetUserAsync()
     {

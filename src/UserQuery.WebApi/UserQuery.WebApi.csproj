@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\UserQuery.Authentication\UserQuery.Authentication.csproj" />
     <ProjectReference Include="..\UserQuery.Core\UserQuery.Core.csproj" />
     <ProjectReference Include="..\UserQuery.Repositories\UserQuery.Repositories.csproj" />
   </ItemGroup>

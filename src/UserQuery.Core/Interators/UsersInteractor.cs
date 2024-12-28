@@ -1,10 +1,10 @@
-﻿using UserQuery.BusinessObjects;
+﻿using UserQuery.BusinessObjects.Interfaces.User;
 
 namespace UserQuery.Core.Interators;
 
 internal class UsersInteractor(IUserRepository repository,
-                                  IUserOutputPort presenter,
-                                  IUserCache cache) : IUserInputPort
+                               IUserOutputPort presenter,
+                               IUserCache cache) : IUserInputPort
 {
     public async Task GetUserAsync()
     {

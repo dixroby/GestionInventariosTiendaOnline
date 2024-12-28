@@ -1,4 +1,5 @@
-﻿using UserQuery.Entities.ValueObjects;
+﻿using UserQuery.BusinessObjects.Interfaces.User;
+using UserQuery.Entities.ValueObjects;
 
 namespace UserQuery.WebApi.EndPoints;
 

@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
-using UserQuery.BusinessObjects;
+using UserQuery.BusinessObjects.Interfaces.User;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
