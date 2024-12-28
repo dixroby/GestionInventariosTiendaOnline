@@ -10,7 +10,7 @@ builder.Services.AddCoreServices(option =>
 
 builder.Services.AddRepositoriesServices(option =>
 {
-    builder.Configuration.GetRequiredSection(ProductsDBOptions.SectionKey)
+    builder.Configuration.GetRequiredSection(DBOptions.SectionKey)
     .Bind(option);
 });
 
@@ -34,7 +34,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapGroup("/api/v1/")
+app.MapGroup("")
    .WithTags("Products endpoints")
    .MapProductskEndPoint();
 

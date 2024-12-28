@@ -2,7 +2,7 @@
 
 namespace UserCommand.BusinessObjects.Interfaces;
 
-public interface IProductsOutputPort
+public interface IUsersOutputPort
 {
     Task HandleResultAsync();
 }

@@ -1,6 +1,6 @@
 ﻿namespace UserCommand.Core.Presenters;
 
-internal class ProductsPresenter(): IProductsOutputPort
+internal class UsersPresenter(): IUsersOutputPort
 {
     public Task HandleResultAsync()
     {

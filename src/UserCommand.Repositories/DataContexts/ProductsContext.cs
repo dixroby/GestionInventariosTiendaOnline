@@ -2,8 +2,8 @@
 
 internal class ProductsContext : DbContext
 {
-    readonly IOptions<ProductsDBOptions> Options;
-    public ProductsContext(IOptions<ProductsDBOptions> options)
+    readonly IOptions<DBOptions> Options;
+    public ProductsContext(IOptions<DBOptions> options)
     {
         Options = options;
         ChangeTracker.QueryTrackingBehavior =
@@ -21,5 +21,5 @@ internal class ProductsContext : DbContext
             typeof(ProductsConfiguration).Assembly);
     }
 
-    public DbSet<Product> Products { get; set; }
+    public DbSet<User> User { get; set; }
 }

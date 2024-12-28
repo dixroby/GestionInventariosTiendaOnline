@@ -1,23 +1,16 @@
 ﻿namespace UserCommand.Repositories.Configurations;
 
-internal class ProductsConfiguration : IEntityTypeConfiguration<Product>
+internal class ProductsConfiguration : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<Product> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder
-            .Property(s => s.Price)
-            .HasPrecision(8, 2);
-
-        var products = new List<Product>
+        var products = new List<User>
         {
-            new Product
+            new User
             {
                 Id = 1,
-                Name = "Arroz",
-                Price = 3.99,
-                Description = "Arroz blanco de grano largo, ideal para acompañar tus comidas.",
-                Category ="Granos",
-                QuantityInventory = 10
+                UserName = "ADMIN",
+                Role = "ADMINISTRADOR",
             }
         };
 
