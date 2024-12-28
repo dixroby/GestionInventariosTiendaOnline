@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserCommand.Entities", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserCommand.WebApi", "src\UserCommand.WebApi\UserCommand.WebApi.csproj", "{07361BE8-61F9-4DDB-8313-E4CDF59DF9FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserQuery.Authentication", "src\UserQuery.Authentication\UserQuery.Authentication.csproj", "{B1CD4CD9-B195-443F-BD2D-51CE4303745F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +157,10 @@ Global
 		{07361BE8-61F9-4DDB-8313-E4CDF59DF9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07361BE8-61F9-4DDB-8313-E4CDF59DF9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07361BE8-61F9-4DDB-8313-E4CDF59DF9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -186,6 +192,7 @@ Global
 		{BD27F613-8E06-4AE0-AF9D-9FF8D1F81219} = {56D9040B-87EE-481D-AC55-E9DDE5315B0E}
 		{9F08F5B7-0E1A-40C1-8A78-1E274536C6C2} = {56D9040B-87EE-481D-AC55-E9DDE5315B0E}
 		{07361BE8-61F9-4DDB-8313-E4CDF59DF9FD} = {56D9040B-87EE-481D-AC55-E9DDE5315B0E}
+		{B1CD4CD9-B195-443F-BD2D-51CE4303745F} = {254B3F04-BC76-4C2A-9DED-9E2A983479F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {031E4207-144D-4041-9C01-EBC1A263F95B}
