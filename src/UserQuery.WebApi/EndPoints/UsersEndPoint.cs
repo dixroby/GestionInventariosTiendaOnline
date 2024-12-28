@@ -2,7 +2,7 @@
 
 namespace UserQuery.WebApi.EndPoints;
 
-public static class ProductsEndPoint
+public static class UsersEndPoint
 {
     public static IEndpointRouteBuilder MapProductskEndPoint(this IEndpointRouteBuilder app)
     {

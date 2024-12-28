@@ -21,5 +21,5 @@ internal class ProductsContext : DbContext
             typeof(UsersConfiguration).Assembly);
     }
 
-    public DbSet<Product> Products { get; set; }
+    public DbSet<User> Products { get; set; }
 }

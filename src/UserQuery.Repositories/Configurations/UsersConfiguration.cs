@@ -1,53 +1,29 @@
 ﻿namespace UserQuery.Repositories.Configurations;
 
-internal class UsersConfiguration : IEntityTypeConfiguration<Product>
+internal class UsersConfiguration : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<Product> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
         builder
-            .Property(s => s.Price)
+            .Property(s => s.Role)
             .HasPrecision(8, 2);
 
-        var products = new List<Product>
+        var users = new List<User>
         {
-            new Product
+            new User
             {
                 Id = 1,
-                Name = "Arroz",
-                Price = 3.99,
-                Description = "Arroz blanco de grano largo, ideal para acompañar tus comidas.",
-                Category ="Granos",
-                QuantityInventory = 10
+                UserName = "ADMIN",
+                Role = "Admin",
             },
-            new Product
-            {
+            new User
+             {
                 Id = 2,
-                Name = "Frijoles Negros",
-                Price = 2.99,
-                Description = "Frijoles negros secos, perfectos para preparar guisos y ensaladas.",
-                Category ="Granos",
-                QuantityInventory = 11
-            },
-            new Product
-            {
-                Id = 3,
-                Name = "Aceite de Oliva",
-                Price = 5.49,
-                Description = "Aceite de oliva extra virgen para aderezar ensaladas y cocinar.",
-                Category ="Granos",
-                QuantityInventory = 8
-            },
-            new Product
-            {
-                Id = 4,
-                Name = "Azúcar",
-                Price = 1.49,
-                Description = "Azúcar blanca refinada para endulzar bebidas y postres.",
-                Category ="Granos",
-                QuantityInventory = 4
+                UserName = "USER",
+                Role = "Admin",
             }
         };
 
-        builder.HasData(products);
+        builder.HasData(users);
     }
 }

@@ -12,11 +12,9 @@ internal class UsersPresenter(IOptions<UsersOptions> options): IUserOutputPort
         User = 
             products
             .Select(s => new UserDto(s.Id,
-                                         s.Name,
-                                         s.Description,
-                                         s.Price,
-                                         s.Category,
-                                         s.QuantityInventory));
+                                     s.UserName,
+                                     s.Role)
+            );
 
         return Task.CompletedTask;
     }

@@ -8,12 +8,11 @@ internal class ProductsRepository (ProductsContext context) : IUserRepository
     =>  await
         context
         .Products
-        .OrderByDescending(s => s.Price)
-        .Select(s => new UserDto(s.Id,
-                                     s.Name,
-                                     s.Description,
-                                     s.Price,
-                                     s.Category,
-                                     s.QuantityInventory))
+        .OrderByDescending(s => s.Role)
+        .Select(s => 
+            new UserDto(s.Id,
+                        s.UserName,
+                        s.Role)
+        )
         .ToListAsync();
 }
