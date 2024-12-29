@@ -3,8 +3,28 @@ using UserQuery.WebApi.EndPoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configurar Logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
+// El resto de la configuración
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin();
+        builder.AllowAnyHeader();
+        builder.AllowAnyMethod();
+    }
+    );
+});
+
+builder.Services.AddDistributedMemoryCache();
+
+
 
 builder.Services.AddCoreServices(option =>
 {
@@ -30,18 +50,9 @@ builder.Services.AddJwtTokenServices(option =>
     .Bind(option);
 });
 
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(builder =>
-    {
-        builder.AllowAnyOrigin();
-        builder.AllowAnyHeader();
-        builder.AllowAnyMethod();
-    }
-    );
-});
+builder.Services.AddControllers(); 
+builder.Services.AddAuthorization();
 
-builder.Services.AddDistributedMemoryCache();
 
 var app = builder.Build();
 
@@ -49,9 +60,16 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapGroup("")
-   .WithTags("Products endpoints")
-   .MapProductskEndPoint();
+   .WithTags("Login endpoints")
+   .MapUsersEndPoint();
+
+app.MapGroup("")
+   .WithTags("Login endpoints")
+   .MapLoginEndPoint();
 
 app.InitializeDB();
 

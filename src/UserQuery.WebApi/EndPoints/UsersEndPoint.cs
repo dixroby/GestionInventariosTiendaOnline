@@ -1,15 +1,14 @@
-﻿using UserQuery.BusinessObjects.Interfaces.User;
-using UserQuery.Entities.ValueObjects;
-
-namespace UserQuery.WebApi.EndPoints;
+﻿namespace UserQuery.WebApi.EndPoints;
 
 public static class UsersEndPoint
 {
-    public static IEndpointRouteBuilder MapProductskEndPoint(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder MapUsersEndPoint(this IEndpointRouteBuilder app)
     {
-        app.MapGet(Endpoints.GetUsers, async (IUserController controller)
-        => TypedResults.Ok(await controller.GetUserAsync()));
+        app.MapGet(Endpoints.GetUsers, async (IUserController controller) =>
+            TypedResults.Ok(await controller.GetUserAsync()))
+            .RequireAuthorization();
 
         return app;
     }
+
 }

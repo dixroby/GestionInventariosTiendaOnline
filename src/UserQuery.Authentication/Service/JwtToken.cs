@@ -16,19 +16,21 @@ internal class JwtToken(IOptions<AuthenticationOption> options) : IJwtToken
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-            new Claim(JwtRegisteredClaimNames.Sub, user.Role),
+            new Claim(ClaimTypes.Role, user.Role),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Value.SecretKey));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-        var token = new JwtSecurityToken(issuer: options.Value.Issuer,
-                                         audience: options.Value.Audience,
-                                         claims: claims,
-                                         expires: DateTime.Now.AddMinutes(options.Value.Minutes),
-                                         signingCredentials: creds);
+        var token = new JwtSecurityToken(
+            issuer: options.Value.Issuer,
+            audience: options.Value.Audience,
+            claims: claims,
+            expires: DateTime.Now.AddMinutes(options.Value.Minutes),
+            signingCredentials: creds);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
+
