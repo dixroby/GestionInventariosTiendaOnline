@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Aspire\GestionInventariosTiendaOnline.ServiceDefaults\GestionInventariosTiendaOnline.ServiceDefaults.csproj" />
     <ProjectReference Include="..\ProductsCommand.Core\ProductsCommand.Core.csproj" />
     <ProjectReference Include="..\ProductsCommand.Repositories\ProductsCommand.Repositories.csproj" />
   </ItemGroup>

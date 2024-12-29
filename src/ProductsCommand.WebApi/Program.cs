@@ -1,4 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
@@ -28,6 +30,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddDistributedMemoryCache();
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {

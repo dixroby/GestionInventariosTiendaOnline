@@ -3,11 +3,13 @@ using UserQuery.WebApi.EndPoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 // Configurar Logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
-// El resto de la configuración
+// El resto de la configuraciÃ³n
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
@@ -22,9 +24,7 @@ builder.Services.AddCors(options =>
     );
 });
 
-builder.Services.AddDistributedMemoryCache();
-
-
+builder.AddRedisDistributedCache("redis");
 
 builder.Services.AddCoreServices(option =>
 {
@@ -55,6 +55,8 @@ builder.Services.AddAuthorization();
 
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {

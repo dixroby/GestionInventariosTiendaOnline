@@ -2,6 +2,8 @@ using ProductsQuery.Repositories.Options;
 using ProductsQuery.WebApi.EndPoints;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
@@ -28,9 +30,11 @@ builder.Services.AddCors(options =>
     );
 });
 
-builder.Services.AddDistributedMemoryCache();
+builder.AddRedisDistributedCache("redis");
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {

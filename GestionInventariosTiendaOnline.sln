@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserCommand.WebApi", "src\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserQuery.Authentication", "src\UserQuery.Authentication\UserQuery.Authentication.csproj", "{B1CD4CD9-B195-443F-BD2D-51CE4303745F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionInventariosTiendaOnline.AppHost", "Aspire\GestionInventariosTiendaOnline.AppHost\GestionInventariosTiendaOnline.AppHost.csproj", "{E8AB0551-C7F3-4F2E-B3B5-D448D37A2B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionInventariosTiendaOnline.ServiceDefaults", "Aspire\GestionInventariosTiendaOnline.ServiceDefaults\GestionInventariosTiendaOnline.ServiceDefaults.csproj", "{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +165,14 @@ Global
 		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1CD4CD9-B195-443F-BD2D-51CE4303745F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8AB0551-C7F3-4F2E-B3B5-D448D37A2B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8AB0551-C7F3-4F2E-B3B5-D448D37A2B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8AB0551-C7F3-4F2E-B3B5-D448D37A2B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8AB0551-C7F3-4F2E-B3B5-D448D37A2B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
