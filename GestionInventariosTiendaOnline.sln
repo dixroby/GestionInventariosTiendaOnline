@@ -67,6 +67,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionInventariosTiendaOnl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionInventariosTiendaOnline.ServiceDefaults", "Aspire\GestionInventariosTiendaOnline.ServiceDefaults\GestionInventariosTiendaOnline.ServiceDefaults.csproj", "{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspire", "Aspire", "{F465B3B4-D66A-4263-A9F4-11FBF7B5A325}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "GestionInventariosTiendaOnline.Cliente", "FrontEnd\GestionInventariosTiendaOnline.Cliente\GestionInventariosTiendaOnline.Cliente.esproj", "{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +177,12 @@ Global
 		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,6 +215,9 @@ Global
 		{9F08F5B7-0E1A-40C1-8A78-1E274536C6C2} = {56D9040B-87EE-481D-AC55-E9DDE5315B0E}
 		{07361BE8-61F9-4DDB-8313-E4CDF59DF9FD} = {56D9040B-87EE-481D-AC55-E9DDE5315B0E}
 		{B1CD4CD9-B195-443F-BD2D-51CE4303745F} = {254B3F04-BC76-4C2A-9DED-9E2A983479F2}
+		{E8AB0551-C7F3-4F2E-B3B5-D448D37A2B4B} = {F465B3B4-D66A-4263-A9F4-11FBF7B5A325}
+		{E6D46E7F-4F4F-492A-B1B9-B296B3573B71} = {F465B3B4-D66A-4263-A9F4-11FBF7B5A325}
+		{0B4EEBEE-BF74-4062-B549-2E9A6B05B532} = {01FA47C8-BE11-4F2A-8C5D-F18648419E9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {031E4207-144D-4041-9C01-EBC1A263F95B}

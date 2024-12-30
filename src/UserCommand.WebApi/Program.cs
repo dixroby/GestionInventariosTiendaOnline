@@ -31,6 +31,8 @@ builder.Services.AddDistributedMemoryCache();
 
 var app = builder.Build();
 
+app.UseCors();
+
 app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())

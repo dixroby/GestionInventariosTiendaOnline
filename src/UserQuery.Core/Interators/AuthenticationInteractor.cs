@@ -15,11 +15,14 @@ internal class AuthenticationInteractor(IUserRepository repository,
             await
             repository
             .FindUserByUserNameAsync(username);
+
         if (Result == null)
             throw new Exception("Usuario no existe");
 
         var token = jwtToken.GenerateJwtToken(Result);
 
-        await presenter.HandleResultAsync(token);
+        var login = new LoginResponseDto(token, Result.Role);
+
+        await presenter.HandleResultAsync(login);
     }
 }

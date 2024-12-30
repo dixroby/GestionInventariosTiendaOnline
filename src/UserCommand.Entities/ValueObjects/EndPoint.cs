@@ -2,5 +2,5 @@
 
 public static class Endpoints
 {
-    public const string CreateUser = "/createproducts";
+    public const string CreateUser = "/createUser";
 }

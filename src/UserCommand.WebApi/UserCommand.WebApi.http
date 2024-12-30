@@ -1,6 +1,0 @@
-@UserCommand.WebApi_HostAddress = http://localhost:5264
-
-GET {{UserCommand.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

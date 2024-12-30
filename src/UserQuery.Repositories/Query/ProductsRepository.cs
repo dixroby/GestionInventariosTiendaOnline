@@ -7,7 +7,7 @@ internal class ProductsRepository (ProductsContext context) : IUserRepository
     public async Task<UserDto> FindUserByUserNameAsync(string userName)
     => await
         context
-        .Products
+        .User
         .Where(x => x.UserName == userName)
         .Select(s =>
             new UserDto(s.Id,
@@ -19,7 +19,7 @@ internal class ProductsRepository (ProductsContext context) : IUserRepository
     public async Task<IEnumerable<UserDto>> GetUserSortedByDescendingPriceAsync()
     =>  await
         context
-        .Products
+        .User
         .OrderByDescending(s => s.Role)
         .Select(s => 
             new UserDto(s.Id,

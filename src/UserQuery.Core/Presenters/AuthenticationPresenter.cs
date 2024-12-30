@@ -1,18 +1,16 @@
-﻿using UserQuery.BusinessObjects.Interfaces.User;
-using UserQuery.BusinessObjects.Options;
+﻿using UserQuery.BusinessObjects.Options;
 using UserQuery.Entities.Dtos;
 
 namespace UserQuery.Core.Presenters;
 
-internal class AuthenticationPresenter(IOptions<UsersOptions> options): IAuthenticationOutputPort
+internal class AuthenticationPresenter(IOptions<UsersOptions> options) : IAuthenticationOutputPort
 {
-    public string Token { get; private set; }
+    public LoginResponseDto LoginResponse { get; private set; }
 
-
-    public Task HandleResultAsync(string token)
+    public async Task HandleResultAsync(LoginResponseDto login)
     {
-        Token = token;
+        LoginResponse = login;
 
-        return Task.CompletedTask;
+        await Task.CompletedTask;
     }
 }

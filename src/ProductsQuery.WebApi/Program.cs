@@ -34,6 +34,8 @@ builder.AddRedisDistributedCache("redis");
 
 var app = builder.Build();
 
+app.UseCors();
+
 app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())

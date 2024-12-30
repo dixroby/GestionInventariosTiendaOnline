@@ -8,8 +8,8 @@ public static class LoginEndPoint
         {
             try
             {
-                var reulst = await controller.AuthenticateAsync(request.UserName);
-                return Results.Ok(new { Token = reulst });
+                var result = await controller.AuthenticateAsync(request.UserName);
+                return Results.Ok(result);
             }
             catch (Exception ex)
             {

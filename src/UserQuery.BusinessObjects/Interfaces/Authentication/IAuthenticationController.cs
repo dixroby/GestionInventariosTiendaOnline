@@ -2,5 +2,5 @@
 
 public interface IAuthenticationController
 {
-    Task<string> AuthenticateAsync(string username);
+    Task<LoginResponseDto> AuthenticateAsync(string username);
 }
