@@ -1,0 +1,75 @@
+<div class="card-container">
+     <mat-card>
+       <mat-card-header>
+         <mat-card-title>Lista Productos</mat-card-title>
+       </mat-card-header>
+       <mat-card-header *ngIf="isAdminLoggedIn">
+          <form [formGroup]="productoForm" (ngSubmit)="crearProducto()" class="form-container">
+               <mat-form-field class="form-field">
+                 <mat-label>Nombre</mat-label>
+                 <input matInput formControlName="name">
+               </mat-form-field>
+               <mat-form-field class="form-field">
+                 <mat-label>Descripción</mat-label>
+                 <input matInput formControlName="description">
+               </mat-form-field>
+               <mat-form-field class="form-field">
+                 <mat-label>Precio</mat-label>
+                 <input matInput formControlName="price" type="number">
+               </mat-form-field>
+               <mat-form-field class="form-field">
+                 <mat-label>Categoría</mat-label>
+                 <input matInput formControlName="category">
+               </mat-form-field>
+               <mat-form-field class="form-field">
+                 <mat-label>Cantidad Inventario</mat-label>
+                 <input matInput formControlName="quantityInventory" type="number">
+               </mat-form-field>
+               <div class="button-container">
+                 <button mat-raised-button color="primary" type="submit">Crear Producto</button>
+               </div>
+             </form>
+       </mat-card-header>
+       <mat-card-content>
+         
+   
+         <table mat-table [dataSource]="listaProducto" class="mat-elevation-z8">
+           <ng-container matColumnDef="name">
+             <th mat-header-cell *matHeaderCellDef> Nombre </th>
+             <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+           </ng-container>
+   
+           <ng-container matColumnDef="description">
+             <th mat-header-cell *matHeaderCellDef> Descripción </th>
+             <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+           </ng-container>
+   
+           <ng-container matColumnDef="price">
+             <th mat-header-cell *matHeaderCellDef> Precio </th>
+             <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+           </ng-container>
+   
+           <ng-container matColumnDef="category">
+             <th mat-header-cell *matHeaderCellDef> Categoría </th>
+             <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+           </ng-container>
+   
+           <ng-container matColumnDef="quantityInventory">
+             <th mat-header-cell *matHeaderCellDef> Cantidad Inventario </th>
+             <td mat-cell *matCellDef="let element"> {{element.quantityInventory}} </td>
+           </ng-container>
+   
+           <ng-container matColumnDef="actions">
+             <th mat-header-cell *matHeaderCellDef> Acciones </th>
+             <td mat-cell *matCellDef="let element">
+               <button mat-button color="warn" (click)="eliminarProducto(element)">Eliminar</button>
+             </td>
+           </ng-container>
+   
+           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+         </table>
+       </mat-card-content>
+     </mat-card>
+   </div>
+   
