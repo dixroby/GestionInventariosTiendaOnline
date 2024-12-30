@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Aspire\GestionInventariosTiendaOnline.ServiceDefaults\GestionInventariosTiendaOnline.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\UserQuery.Authentication\UserQuery.Authentication.csproj" />
+    <ProjectReference Include="..\UserQuery.Core\UserQuery.Core.csproj" />
+    <ProjectReference Include="..\UserQuery.Repositories\UserQuery.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,6 +1,9 @@
-using ProductsQuery.BusinessObjects.Interfaces;
+using ProductsQuery.Repositories.Options;
+using ProductsQuery.WebApi.EndPoints;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
@@ -12,7 +15,7 @@ builder.Services.AddCoreServices(option =>
 
 builder.Services.AddRepositoriesServices(option =>
 {
-    builder.Configuration.GetRequiredSection(ProductsDBOptions.SectionKey)
+    builder.Configuration.GetRequiredSection(DBOptions.SectionKey)
     .Bind(option);
 });
 
@@ -27,17 +30,23 @@ builder.Services.AddCors(options =>
     );
 });
 
-builder.Services.AddDistributedMemoryCache();
+builder.AddRedisDistributedCache("redis");
 
 var app = builder.Build();
+
+app.UseCors();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-app.MapGet(Endpoints.GetProducts, async (IProductsController controller) 
-=> TypedResults.Ok(await controller.GetProductsAsync()));
+app.MapGroup("")
+   .WithTags("Products query")
+   .MapProductsEndPoint();
+
 
 app.InitializeDB();
 

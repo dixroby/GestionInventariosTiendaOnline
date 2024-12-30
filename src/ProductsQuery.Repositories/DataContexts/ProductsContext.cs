@@ -2,8 +2,8 @@
 
 internal class ProductsContext : DbContext
 {
-    readonly IOptions<ProductsDBOptions> Options;
-    public ProductsContext(IOptions<ProductsDBOptions> options)
+    readonly IOptions<DBOptions> Options;
+    public ProductsContext(IOptions<DBOptions> options)
     {
         Options = options;
         ChangeTracker.QueryTrackingBehavior =

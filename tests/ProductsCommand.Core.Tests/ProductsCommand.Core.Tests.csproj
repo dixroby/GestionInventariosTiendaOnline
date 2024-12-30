@@ -16,11 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit" />
+    <ProjectReference Include="..\..\src\ProductsCommand.Core\ProductsCommand.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ProductsQuery.Core\ProductsQuery.Core.csproj" />
+    <Using Include="Xunit" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿namespace ProductsQuery.Core.Interators;
+﻿
+namespace ProductsQuery.Core.Interators;
 
 internal class ProductsInteractor(IProductsRepository repository,
                                   IProductsOutputPort presenter,
@@ -16,6 +17,15 @@ internal class ProductsInteractor(IProductsRepository repository,
 
             await cache.SetProductsAsync(Result);
         }
+        await presenter.HandleResultAsync(Result);
+    }
+
+    public async Task GetProductByNameAndCategory(ProductsDto request)
+    {
+        var Result =
+                await repository
+                .GetProductByNameAndCategory(request);
+        
         await presenter.HandleResultAsync(Result);
     }
 }

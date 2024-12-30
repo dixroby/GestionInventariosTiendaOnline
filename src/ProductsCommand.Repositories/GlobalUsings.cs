@@ -1,0 +1,10 @@
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Options;
+global using ProductsCommand.BusinessObjects.Interfaces;
+global using ProductsCommand.Entities.Dtos;
+global using ProductsCommand.Repositories.Configurations;
+global using ProductsCommand.Repositories.DataContexts;
+global using ProductsCommand.Repositories.Entities;
+global using ProductsCommand.Repositories.Options;
+global using Microsoft.Extensions.Hosting;

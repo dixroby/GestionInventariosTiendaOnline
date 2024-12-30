@@ -10,7 +10,7 @@ internal class ProductsConfiguration : IEntityTypeConfiguration<Product>
 
         var products = new List<Product>
         {
-            new Product
+            new()
             {
                 Id = 1,
                 Name = "Arroz",
@@ -19,7 +19,7 @@ internal class ProductsConfiguration : IEntityTypeConfiguration<Product>
                 Category ="Granos",
                 QuantityInventory = 10
             },
-            new Product
+            new()
             {
                 Id = 2,
                 Name = "Frijoles Negros",
@@ -28,8 +28,7 @@ internal class ProductsConfiguration : IEntityTypeConfiguration<Product>
                 Category ="Granos",
                 QuantityInventory = 11
             },
-            new Product
-            {
+            new() {
                 Id = 3,
                 Name = "Aceite de Oliva",
                 Price = 5.49,
@@ -37,7 +36,7 @@ internal class ProductsConfiguration : IEntityTypeConfiguration<Product>
                 Category ="Granos",
                 QuantityInventory = 8
             },
-            new Product
+            new()
             {
                 Id = 4,
                 Name = "Azúcar",

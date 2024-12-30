@@ -13,10 +13,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductsQuery.BusinessObjects\ProductsQuery.BusinessObjects.csproj" />
-    <ProjectReference Include="..\ProductsQuery.Entities\ProductsQuery.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-  	<InternalsVisibleTo Include="ProductsCommand.Core.Tests" />
+  	<InternalsVisibleTo Include="ProductsQuery.Core.Tests" />
   </ItemGroup>
+  
 </Project>

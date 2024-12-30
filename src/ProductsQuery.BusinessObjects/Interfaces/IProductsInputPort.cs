@@ -3,4 +3,5 @@
 public interface IProductsInputPort
 {
     Task GetProductsAsync();
+    Task GetProductByNameAndCategory(ProductsDto request);
 }
