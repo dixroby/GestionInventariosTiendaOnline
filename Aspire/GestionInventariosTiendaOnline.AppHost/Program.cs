@@ -13,20 +13,37 @@ var redisResources =
     builder
     .AddRedis(redis);
 
-builder
+var userQueryService = 
+    builder
     .AddProject<Projects.UserQuery_WebApi>(appuserquery)
     .WithReference(redisResources);
 
-builder
+var productQueryService =
+    builder
     .AddProject<Projects.ProductsQuery_WebApi>(appproductsquery)
     .WithReference(redisResources);
 
-
+var productCommandService =
 builder
     .AddProject<Projects.ProductsCommand_WebApi>(appproductscommand);
 
+var userCommandService =
 builder
     .AddProject<Projects.UserCommand_WebApi>(appusercommand);
+var client =
+    builder.AddNpmApp("angularGestionTienda", "../../FrontEnd/GestionInventariosTiendaOnline.Cliente")
+    .WithReference(productQueryService)
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints();
+    //.WithReference(productQueryService)
+    //.WithHttpEndpoint(env: "PORT")
+    //.WithExternalHttpEndpoints()
+    //.WithReference(productCommandService)
+    //.WithHttpEndpoint(env: "PORT")
+    //.WithExternalHttpEndpoints()
+    //.WithReference(userCommandService)
+    //.WithHttpEndpoint(env: "PORT")
+    //.WithExternalHttpEndpoints();
 
 builder
     .Build()
