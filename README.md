@@ -53,4 +53,38 @@ Asegúrate de tener instalados los siguientes software:
 
 
 #### Acceder a la Aplicación
-Una vez que ambos servicios estén en funcionamiento, abre tu navegador web y accede a la URL proporcionada por el proyecto **GestionInventariosTiendaOnline**. Dentro del dashboard, localiza el servicio **angularGestionTienda** y haz clic en su URL. Esto te redirigirá al sitio web donde podrás interactuar con el proyecto.
+Una vez que ambos servicios estén en funcionamiento, abre tu navegador web y accede a la URL proporcionada por el proyecto **GestionInventariosTiendaOnline**. Dentro del dashboard, localiza el servicio **angularGestionTienda** (si el puerto no funciona entrar en su consola y ahí sale la ruta) y haz clic en su URL. Esto te redirigirá al sitio web donde podrás interactuar con el proyecto.
+
+## REQUERIMIENTO DESARROLLADO
+
+### Frontend:
+
+#### Módulo de Autenticación:
+
+Implementar inicio de sesión y registro de usuarios.
+
+Roles: Administrador (acceso completo), Empleado (acceso limitado).
+
+#### Módulo de Productos:
+
+CRUD completo para productos (Nombre, Descripción, Precio, Cantidad, Categoría).
+
+Validar que no se ingresen productos con cantidad negativa.
+
+Interfaz Responsiva:
+
+Autenticación y gestión de productos.
+
+### Backend:
+
+#### API RESTful:
+
+Seguir principios REST (códigos de estado, métodos HTTP correctos).
+
+Autenticación basada en tokens (JWT o similar).
+
+Requisitos Adicionales:
+
+Pruebas unitarias para las funciones principales.
+
+Buenas prácticas de seguridad (validación de entradas, protección contra inyección SQL).
